@@ -1,4 +1,6 @@
-pipeline:
+kind: pipeline
+name: default
+
 steps:
 - name: build
   image: alpine
