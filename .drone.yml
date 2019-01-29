@@ -6,16 +6,18 @@ steps:
   image: alpine 
   environment:
     USERNAME:
-      from_secret: docker_username
+      from_secret: username
   commands:
   - echo test
   - echo ${USERNAME}
 
-secrets:
-  docker_username:
-    external:
-      name: secret/docker#username
+---
+kind: secret
 
-  docker_password:
-    external:
-      name: secret/docker#password
+external_data:
+  username:
+    path: secret/data/docker
+    name: username
+  password:
+    path: secret/data/docker
+    name: password
