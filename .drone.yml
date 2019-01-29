@@ -6,6 +6,7 @@ steps:
     USERNAME:
       from_secret: username
   commands:
+  - echo test
   - echo ${USERNAME}
 
 secrets:
