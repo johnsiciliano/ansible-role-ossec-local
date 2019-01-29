@@ -8,9 +8,8 @@ steps:
     USERNAME:
       from_secret: username
   commands:
-  - asdfjasdfkj
   - echo test
-  - echo ${USERNAME}
+  - echo $${USERNAME}
 
 ---
 kind: secret
