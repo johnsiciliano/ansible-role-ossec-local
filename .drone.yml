@@ -14,10 +14,11 @@ steps:
 ---
 kind: secret
 
-external_data:
-  username:
-    path: secrets/docker
-    name: username
-  password:
-    path: secrets/docker
-    name: password
+secrets:
+  docker_username:
+    external:
+      name: secret/data/docker#username
+
+  docker_password:
+    external:
+      name: secret/data/docker#password
