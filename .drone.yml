@@ -8,8 +8,8 @@ steps:
     USERNAME:
       from_secret: username
   commands:
-  - echo test
-  - echo $${USERNAME}
+  - chmod +x test.sh
+  - ./test.sh 
 
 ---
 kind: secret
