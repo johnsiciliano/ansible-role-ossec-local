@@ -16,8 +16,8 @@ kind: secret
 
 external_data:
   username:
-    path: secrets/data/docker
+    path: secrets/docker
     name: username
   password:
-    path: secrets/data/docker
+    path: secrets/docker
     name: password
