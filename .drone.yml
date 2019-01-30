@@ -11,10 +11,13 @@ steps:
   - chmod +x test.sh
   - ./test.sh 
 
-secrets:
+---
+kind: secret
+
+external_data:
   username:
-    external:
-      name: secret/data/docker#username
+    path: secrets/data/docker
+    name: username
   password:
-    external:
-      name: secret/data/docker#password
+    path: secrets/data/docker
+    name: password
