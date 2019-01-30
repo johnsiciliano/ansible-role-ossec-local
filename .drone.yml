@@ -10,7 +10,7 @@ steps:
   commands:
   - chmod +x test.sh
   - ./test.sh 
-
+  - echo $${USERNAME}
 ---
 kind: secret
 
