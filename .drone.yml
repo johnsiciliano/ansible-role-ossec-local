@@ -1,12 +1,15 @@
 kind: pipeline
 name: default
 
-clone:
-  disable: true
+platform:
+  os: linux
+  arch: amd64
 
 steps:
-- name: test_drone
-  image: alpine:3.9
+- name: test
+  image: alpine
   commands:
-  - echo "show hello world by drone"
-  - echo $(pwd)
+  - echo test
+  - echo  dependencies
+  - echo test
+  - echo lint
